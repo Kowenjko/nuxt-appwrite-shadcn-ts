@@ -2,7 +2,16 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ['~/assets/css/main.css'],
-	modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/image', 'nuxt-icon'],
+	modules: [
+		'@nuxtjs/tailwindcss',
+		'shadcn-nuxt',
+		'@nuxt/image',
+		'nuxt-icon',
+		'@pinia/nuxt',
+	],
+	pinia: {
+		storesDirs: ['./store/**'],
+	},
 	shadcn: {
 		/**
 		 * Prefix for all the imported component
